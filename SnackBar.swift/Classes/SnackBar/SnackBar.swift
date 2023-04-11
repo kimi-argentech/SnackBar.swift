@@ -26,13 +26,11 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 			arrangedSubviews: [messageLabel])
 		mainStackView.axis = .horizontal
 		mainStackView.spacing = 8
-        mainStackView.backgroundColor = .yellow
 		return mainStackView
 	}()
 	
     private lazy var iconImage: UIImageView = {
         let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSizeMake(24.0, 24.0)))
-        imageView.backgroundColor = .brown
         return imageView
     }()
     
@@ -44,7 +42,6 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 		messageLabel.adjustsFontSizeToFitWidth = true
 		messageLabel.minimumScaleFactor = 0.8
         messageLabel.sizeToFit()
-        messageLabel.backgroundColor = .brown
 		return messageLabel
 	}()
 	
@@ -57,7 +54,6 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 				.withAlphaComponent(style.actionTextColorAlpha),
 			for: .normal)
 		actionButton.titleLabel?.font = style.actionFont
-        actionButton.backgroundColor = .brown
 		return actionButton
 	}()
 	
