@@ -1,18 +1,18 @@
 {
   "name": "SnackBar.swift",
   "version": "0.1.0",
-  "summary": "A short description of SnackBar.swift.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/ahmed.almasri@ymail.com/SnackBar.swift",
+  "summary": "SnackBar provide brief feedback about an operation through a message at the bottom of the screen.",
+  "description": "Snackbars provide brief feedback about an operation through a message at the bottom of the screen. Snackbars contain up to two lines of text directly related to the operation performed. They may contain a text action.",
+  "homepage": "https://github.com/ahmedAlmasri/SnackBar.swift",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "ahmed.almasri@ymail.com": "ahmed.almasri@ymail.com"
+    "Ahmad Almasri": "ahmed.almasri@ymail.com"
   },
   "source": {
-    "git": "https://github.com/ahmed.almasri@ymail.com/SnackBar.swift.git",
+    "git": "https://github.com/ahmedAlmasri/SnackBar.swift.git",
     "tag": "0.1.0"
   },
   "platforms": {

@@ -40,8 +40,14 @@ class AppSnackBar: SnackBar {
 	
 	override var style: SnackBarStyle {
 		var style = SnackBarStyle()
-		style.background = .red
-		style.textColor = .green
+        style.background = .systemTeal
+        style.textColor = .white
+        style.actionTextColor = .black
+        style.actionTextColorAlpha = 1.0
+        style.borderColor = .systemRed
+        style.borderWidth = 1.0
+        style.borderRadius = 10.0
+        style.leftIcon = UIImage(named: "ic_attention_snackbar")
 		return style
 	}
 }

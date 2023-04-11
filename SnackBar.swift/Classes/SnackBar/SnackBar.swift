@@ -70,8 +70,9 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 		self.duration = duration
 		super.init(frame: .zero)
 		self.backgroundColor = style.background
-		self.layer.cornerRadius = style.borderWidth
+		self.layer.cornerRadius = style.borderRadius
         self.layer.borderColor = style.borderColor.cgColor
+        self.layer.borderWidth = style.borderWidth
         self.layer.masksToBounds = true
 		self.messageLabel.text = message
         self.iconImage.image = style.leftIcon
