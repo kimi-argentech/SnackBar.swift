@@ -25,10 +25,15 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 		let mainStackView = UIStackView(
 			arrangedSubviews: [messageLabel])
 		mainStackView.axis = .horizontal
-		mainStackView.spacing = 10
+		mainStackView.spacing = 8
 		return mainStackView
 	}()
 	
+    private lazy var iconImage: UIImageView = {
+        let imageView = UIImageView(frame: CGRect(origin: .zero, size: CGSizeMake(24.0, 24.0)))
+        return imageView
+    }()
+    
 	private lazy var messageLabel: UILabel = {
 		let messageLabel = UILabel()
 		messageLabel.numberOfLines = Int(style.maxNumberOfLines)
@@ -52,7 +57,6 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 	}()
 	
 	open var style: SnackBarStyle {
-		
 		return SnackBarStyle()
 	}
 	private let contextView: UIView
@@ -67,9 +71,19 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 		super.init(frame: .zero)
 		self.backgroundColor = style.background
 		self.layer.cornerRadius = 5
-		setupView()
-		setupSwipe()
 		self.messageLabel.text = message
+        self.iconImage.image = style.leftIcon
+        self.mainStackView.layer.borderWidth = style.borderWidth
+        self.mainStackView.layer.borderColor = style.borderColor.cgColor
+        self.mainStackView.layer.cornerRadius = style.borderRadius
+        self.mainStackView.layer.masksToBounds = true
+        if (style.leftIcon != nil) {
+            if (!self.mainStackView.subviews.contains(self.iconImage)) {
+                self.mainStackView.insertArrangedSubview(self.iconImage, at: 0)
+            }
+        }
+        setupView()
+        setupSwipe()
 	}
 	
 	required public init?(coder: NSCoder) {
@@ -89,7 +103,6 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 		
 	}
 	private func setupView() {
-		
 		self.setupSubview(mainStackView) {
 			
 			$0.makeConstraints {

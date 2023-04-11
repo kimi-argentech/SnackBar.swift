@@ -11,6 +11,10 @@ public struct SnackBarStyle {
 	public init() { }
 	// Container
 	public var background: UIColor = .lightGray
+    public var borderColor: UIColor = UIColor.black
+    public var borderWidth: Double = 1.0
+    public var borderRadius: Double = 4.0
+    public var leftIcon: UIImage? = nil
 	var padding = 5
 	var inViewPadding = 20
 	// Label
