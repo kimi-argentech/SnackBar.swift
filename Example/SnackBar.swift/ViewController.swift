@@ -30,7 +30,7 @@ class ViewController: UIViewController {
 	
 	@objc func buttonTapped(_ sender: UIButton) {
 		
-		AppSnackBar.make(in: self.view, message: "The Internet connection appears to be offline.", duration: .lengthLong).setAction(with: "Retry", action: {
+		AppSnackBar.make(in: self.view, message: "Error.", duration: .lengthLong).setAction(with: "Retry", action: {
 			
 		}).show()
 	}

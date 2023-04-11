@@ -15,8 +15,8 @@ public struct SnackBarStyle {
     public var borderWidth: Double = 1.0
     public var borderRadius: Double = 4.0
     public var leftIcon: UIImage? = nil
-	var padding = 5
-	var inViewPadding = 20
+	public var padding = 16
+	public var inViewPadding = 8
 	// Label
 	public var textColor: UIColor = .black
     public var font: UIFont = UIFont.systemFont(ofSize: UIFontMetrics.default.scaledValue(for: 14))
