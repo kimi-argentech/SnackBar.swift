@@ -47,7 +47,7 @@ class AppSnackBar: SnackBar {
         style.borderColor = .systemRed
         style.borderWidth = 1.0
         style.borderRadius = 10.0
-        style.leftIcon = UIImage(named: "ic_attention_snackbar")
+        style.leftIcon = UIImage(named: "check")
 		return style
 	}
 }

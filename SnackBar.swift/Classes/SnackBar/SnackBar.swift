@@ -173,6 +173,11 @@ open class SnackBar: UIView, SnackBarAction, SnackBarPresentable {
 		
 		return self
 	}
+    
+    public func addSpacer() -> Self {
+        mainStackView.addArrangedSubview(UIView())
+        return self
+    }
 	
 	public func show() {
 		constraintSuperView(with: contextView)
